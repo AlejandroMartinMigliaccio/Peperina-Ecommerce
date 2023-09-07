@@ -1,6 +1,9 @@
 {% extends 'store/main.html' %}
 {% load static %}
 {% block content %}
+
+<img class="LOGO" src="{% static 'images/LOGO.png' %}" alt="Imagen">
+
 <div class="row">
     {% for product in products %}
     <div class="col-lg-4">
@@ -8,7 +11,7 @@
         <div class="box-element product">
             <h6><strong>{{product.name}}</strong></h6>
             <hr>
-            <button class="btn btn-outline-secondary add-btn">Agregar al Carrito</button>
+            <button data-product="{{product.id}}" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Agregar al Carrito</button>
             <a class="btn btn-outline-success" href="#">Ver</a>
             <h4 style="display: inline-block; float:right "><strong>${{product.price|floatformat:2}}</strong></h4>
         </div>
