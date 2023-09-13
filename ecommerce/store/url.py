@@ -9,5 +9,6 @@ urlpatterns = [
     path('process_order/', views.processOrder, name="process_order"),
     path('about_us/',views.aboutUs, name='about_us'),
     path('faq/',views.FAQ, name='faq'),
+    path('contact_us/',views.contactUs, name='contact_us'),
 ]
 
