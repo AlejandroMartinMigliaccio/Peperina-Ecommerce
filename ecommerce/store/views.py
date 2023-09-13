@@ -90,3 +90,23 @@ def processOrder(request):
 		)
 
 	return JsonResponse('Payment submitted..', safe=False)
+
+def aboutUs(request):
+	data = cartData(request)
+	
+	cartItems = data['cartItems']
+	order = data['order']
+	items = data['items']
+
+	context = {'items':items, 'order':order, 'cartItems':cartItems}
+	return render(request, 'store/aboutUs.html', context)
+
+def FAQ(request):
+	data = cartData(request)
+	
+	cartItems = data['cartItems']
+	order = data['order']
+	items = data['items']
+
+	context = {'items':items, 'order':order, 'cartItems':cartItems}
+	return render(request, 'store/faq.html', context)

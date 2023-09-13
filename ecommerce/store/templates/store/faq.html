@@ -1,0 +1,22 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+<img class="LOGO" src="{% static 'images/LOGO.png' %}" alt="Imagen">
+
+<h2 class="quienes_somos">Preguntas Frecuentes</h2>
+
+<br>
+
+<ul>
+    <li>Los productos tienen garantia?</li>
+    <h6>Si, por 1 mes.</h6>
+    <li>Los productos tienen cambio?</li>
+    <h6>Si.</h6>
+    <li>Se aceptan tarjetas de credito y debito?</li>
+    <h6>Si. Tanto Visa como Mastercard.</h6>
+    <li>Se puede pagar en efectivo?</li>
+    <h6>Si, al momento de hacer la compra se le pasara un codigo de barras para que lo pague por RapiPago o PagoFacil.</h6>
+</ul>
+
+{% endblock content %}
